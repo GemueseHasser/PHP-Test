@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  database:
+    image: 'mariadb:latest'
+    container_name: 'database'
+    restart: 'unless-stopped'
+    ports:
+      - '3306:3306/tcp'
+    environment:
+      MYSQL_USER: 'root'
+      MYSQL_PASSWORD: 'test'
+      MYSQL_DATABASE: 'contactbook'
+      MYSQL_ROOT_PASSWORD: 'toor'
+    volumes:
+      - '/home/jonas/Dokumente/database:/var/lib/mysql'
