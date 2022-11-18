@@ -99,6 +99,7 @@ body {
     display: flex;
     background-color: rgba(0, 0, 0, 0.05);
     align-items: center;
+    justify-content: space-between;
 }
 
 .profilePicture {
@@ -111,4 +112,33 @@ body {
 
 .contactProperties {
     margin-left: 20px;
+}
+
+.callButton {
+    width: 80px;
+    height: 30px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+
+.callButton:hover {
+    background-color: limegreen;
+}
+
+.removeButton {
+    width: 80px;
+    height: 30px;
+    margin-right: 40px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+
+.removeButton:hover {
+    background-color: #ff4b4b;
 }

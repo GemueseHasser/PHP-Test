@@ -72,6 +72,17 @@ if (!isset($_SESSION["username"])) {
         $stmt->bindParam(":tableName", $tableName);
         $stmt->execute();
 
+        if (isset($_GET["remove"])) {
+            $remove = $_GET["remove"];
+
+            $stmt = $mysql->prepare("DELETE FROM `:tableName` WHERE CONTACT = :contact");
+            $stmt->bindParam(":tableName", $tableName);
+            $stmt->bindParam(":contact", $remove);
+            $stmt->execute();
+
+            header("Location: index.php?page=contacts");
+        }
+
         if (isset($_POST["name"]) && isset($_POST["phone"])) {
             if ($_POST["name"] == "" || $_POST["phone"] == "") {
                 echo "Bitte gib einen Namen und eine Telefonnummer an!";
@@ -121,10 +132,17 @@ if (!isset($_SESSION["username"])) {
 
                     echo "
                         <div class='contact'>
-                            <img class='profilePicture' src='../icon/profilePicture.png' alt='profilePcture'>
-                            <div class='contactProperties'>
-                                <b>$name</b><br>
-                                $phone
+                            <div style='display: flex; align-items: center;'>
+                                <img class='profilePicture' src='../icon/profilePicture.png' alt='profilePcture'>
+                                <div class='contactProperties'>
+                                    <b>$name</b><br>
+                                    $phone
+                                </div>
+                            </div>
+                            
+                            <div style='align-items: center;'>
+                                <div><a href='tel: $phone'><button class='callButton'>Anrufen</button></a></div>
+                                <div><a href='?page=contacts&remove=$name'><button class='removeButton'>Entfernen</button></a></div>
                             </div>
                         </div>
                     ";
