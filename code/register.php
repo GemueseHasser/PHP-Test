@@ -3,6 +3,7 @@
 <head>
     <title>Registrieren</title>
     <meta charset="UTF-8">
+    <link rel="icon" href="../icon/appicon.svg">
     <link rel="stylesheet" type="text/css" href="../style/registerStyle.css">
 </head>
 <body>
