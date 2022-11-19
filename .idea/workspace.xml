@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49901b76-a841-4c7d-9c61-100a36052063" name="Changes" comment="add icon">
+    <list default="true" id="49901b76-a841-4c7d-9c61-100a36052063" name="Changes" comment="implement call and remove function">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/234b895a-e0f6-4015-a4bd-562123bd1005.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/234b895a-e0f6-4015-a4bd-562123bd1005.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/indexStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/indexStyle.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,8 @@
       <workItem from="1668376766259" duration="16000" />
       <workItem from="1668462309865" duration="2311000" />
       <workItem from="1668702571555" duration="1064000" />
-      <workItem from="1668784756495" duration="4121000" />
+      <workItem from="1668784756495" duration="4168000" />
+      <workItem from="1668864010342" duration="527000" />
     </task>
     <task id="LOCAL-00001" summary="add icon">
       <created>1668786586064</created>
@@ -91,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668786586064</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="implement call and remove function">
+      <created>1668788907834</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668788907834</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +118,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="add icon" />
+    <MESSAGE value="implement call and remove function" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement call and remove function" />
   </component>
 </project>

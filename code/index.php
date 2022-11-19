@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if ($_GET["logout"]) {
+if (isset($_GET["logout"])) {
     session_destroy();
     header("Location: login.php");
     exit;
