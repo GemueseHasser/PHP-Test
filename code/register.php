@@ -34,11 +34,13 @@
 </div>
 
 <?php
+require 'mysql.php';
+
 if (isset($_POST["submit"])) {
-    try {
-        $mysql = new PDO("mysql:host=127.0.0.1;dbname=contactbook", "root", "toor");
-    } catch (PDOException $e) {
-        echo "SQL-Error: " . $e->getMessage();
+
+    if (!isset($mysql)) {
+        echo "Es ist ein Fehler bei der Verbindung zur Datenbank aufgetreten.";
+        exit;
     }
 
     $stmt = $mysql->prepare("SELECT * FROM users WHERE USERNAME = :user");

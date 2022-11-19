@@ -57,15 +57,16 @@ if (!isset($_SESSION["username"])) {
 
     <div class="content">
         <?php
+        require 'mysql.php';
+
         $page = $_GET["page"];
 
-        try {
-            $mysql = new PDO("mysql:host=127.0.0.1;dbname=contactbook", "root", "toor");
-        } catch (PDOException $e) {
-            echo "SQL-Error: " . $e->getMessage();
-        }
-
         $tableName = "user_" . $_SESSION["username"];
+
+        if (!isset($mysql)) {
+            echo "Es ist ein Fehler bei der Verbindung zur Datenbank aufgetreten.";
+            exit;
+        }
 
         // create table if not exists
         $stmt = $mysql->prepare("CREATE TABLE IF NOT EXISTS `:tableName` (CONTACT varchar(255) UNIQUE, PHONE varchar(255))");
